@@ -1,19 +1,16 @@
-// ==================== FUNÇÕES DA LISTA ====================
 
-// 1) Maior e Menor valor entre 5 inteiros
+
 function MAIOR_MENOR(a, b, c, d, e) {
     const numeros = [a, b, c, d, e];
     return `Maior: ${Math.max(...numeros)} | Menor: ${Math.min(...numeros)}`;
 }
 
-// 2) Verifica se é vogal (Retorna 1 ou 0 internamente, mas exibe o texto limpo)
 function VOGAL(c) {
     if (!c) return 0;
     const char = c.toLowerCase()[0];
     return ['a', 'e', 'i', 'o', 'u'].includes(char) ? 1 : 0;
 }
 
-// 3) Números pares no intervalo aberto e seu somatório
 function LIMITES(li, ls) {
     let pares = [];
     let somatorio = 0;
@@ -26,24 +23,20 @@ function LIMITES(li, ls) {
     return `Pares: [${pares.join(', ')}] | Somatório: ${somatorio}`;
 }
 
-// 4) Ordena 3 valores inteiros em ordem crescente
 function ORDEM(a, b, c) {
     const numeros = [a, b, c];
     numeros.sort((x, y) => x - y);
     return `Ordem crescente: ${numeros.join(', ')}`;
 }
 
-// 5) Verifica se é positivo ou negativo
 function POSITIVO_NEGATIVO(x) {
     return x >= 0;
 }
 
-// 6) Verifica se é par ou ímpar
 function PAR_IMPAR(x) {
     return x % 2 === 0;
 }
 
-// ==================== PONTE ENTRE HTML E JS ====================
 
 function dispararEx1() {
     const a = parseInt(document.getElementById('ex1_a').value);
@@ -66,7 +59,6 @@ function dispararEx2() {
         return;
     }
     const resultado = VOGAL(caractere);
-    // Transforma o retorno de 1 ou 0 em texto limpo para o usuário
     const textoResultado = resultado === 1 ? "É uma vogal" : "Não é uma vogal";
     document.getElementById('res_ex2').innerHTML = `Resultado: ${textoResultado}.`;
 }
